@@ -3,7 +3,7 @@ var stop = document.getElementById("Stop").addEventListener("click", stop);
 function changeColor() {
 
 }
-
+$("#myCanvas").css('backgro')
 var myColor = ["red", "blue", "yello", "gold"];
 
 var currentIndex = 0;
