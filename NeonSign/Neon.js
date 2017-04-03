@@ -1,26 +1,19 @@
-﻿//var canvas = document.getElementById("myCanvas");
-//var stop = document.getElementById("Stop").addEventListener("click", stop);
-
+﻿function popUp() {
+    return window.prompt("איזה צבע להציג?", "red");
+}
 function changeColor() {
-    $("#myCanvas").css(' background-color',popUp());
-
+    $("#myCanvas").css('background-color', popUp());
 }
 
-function popUp() {
-    return window.prompt("איזה צבע","red")
-
-}
-
-var myColor = ["red", "blue", "yello", "gold"];
-
- currentIndex = 1;
+var myColor = ["red", "blue", "yellow", "black"];
+var intervalId = 0;
+ currentIndex = 0;
 function start() {
-var intervalId = setInterval(startlogic, 1000);
-
+ intervalId = setInterval(startlogic, 1000);
 }
 
 function startlogic() {
-    $("#myCanvas").css(' background-color', myColor[currentIndex]);
+    $("#myCanvas").css('background-color', myColor[currentIndex]);
     currentIndex++;
     if (currentIndex === myColor.length) {
 
@@ -32,5 +25,4 @@ function startlogic() {
 function stop() {
 
     clearInterval(intervalId);
-
 }
